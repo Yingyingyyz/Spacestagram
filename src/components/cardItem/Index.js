@@ -33,13 +33,13 @@ const CardItem = (props) => {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
-    //click ins || facebook || Twitter ,share link.
+    //share link.
     const copyImageUrl = () => {
         navigator.clipboard.writeText(url)
         document.dispatchEvent(new Event('successCopy'))
     }
 
-    //点击往喜欢列表添加或者移除
+    //Click to add or remove from the like list
     const handleClickLikeIcon = () => {
         try {
             //set ui action view
@@ -97,10 +97,11 @@ const CardItem = (props) => {
                 <IconButton aria-label="liked" onClick={handleClickLikeIcon}>
                     <FavoriteIcon style={{ color: liked ? 'red' : 'white' }} />
                 </IconButton>
-                <IconButton aria-label="share" style={{ color: '#fff' }} aria-describedby={id} variant="contained" onClick={handleClick}>
+                <IconButton aria-label="share" onClick={copyImageUrl} style={{ color: '#fff' }} >
+                    {/* aria-describedby={id} variant="contained" onClick={handleClick} */}
                     <ShareIcon />
                 </IconButton>
-                <Popover
+                {/* <Popover
                     id={id}
                     open={open}
                     anchorEl={anchorEl}
@@ -126,7 +127,7 @@ const CardItem = (props) => {
                             <InstagramIcon />
                         </IconButton>
                     </div>
-                </Popover>
+                </Popover> */}
 
                 <IconButton
                     className="showDetail"
