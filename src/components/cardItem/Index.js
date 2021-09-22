@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { Card, CardMedia, CardContent, Typography, CardActions, IconButton, Collapse, Popover } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import ShareIcon from '@material-ui/icons/Share';
 
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -101,33 +98,7 @@ const CardItem = (props) => {
                     {/* aria-describedby={id} variant="contained" onClick={handleClick} */}
                     <ShareIcon />
                 </IconButton>
-                {/* <Popover
-                    id={id}
-                    open={open}
-                    anchorEl={anchorEl}
-                    onClose={handleClose}
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'center',
-                    }}
-                    transformOrigin={{
-                        vertical: 'top',
-                        horizontal: 'center',
-                    }}
-                >
-                    <div>
-                        <IconButton aria-label="facebook" onClick={copyImageUrl}>
-                            <FacebookIcon />
-                        </IconButton>
 
-                        <IconButton aria-label="twitter" onClick={copyImageUrl}>
-                            <TwitterIcon />
-                        </IconButton>
-                        <IconButton aria-label="instagram" onClick={copyImageUrl}>
-                            <InstagramIcon />
-                        </IconButton>
-                    </div>
-                </Popover> */}
 
                 <IconButton
                     className="showDetail"
