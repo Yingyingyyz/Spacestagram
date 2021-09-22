@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardMedia, CardContent, Typography, CardActions, IconButton, Collapse, Popover } from '@material-ui/core';
+import { Card, CardMedia, CardContent, Typography, CardActions, IconButton, Collapse } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ShareIcon from '@material-ui/icons/Share';
@@ -17,18 +17,9 @@ const CardItem = (props) => {
     const [showDetail, setShowDetail] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
 
-    //click share icon，popup popover
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    //popover over Close event
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+   
 
     const open = Boolean(anchorEl);
-    const id = open ? 'simple-popover' : undefined;
 
     //share link.
     const copyImageUrl = () => {
