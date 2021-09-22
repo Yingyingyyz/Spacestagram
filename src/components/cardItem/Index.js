@@ -15,12 +15,8 @@ const CardItem = (props) => {
 
     //isShow explanation variable and set function 
     const [showDetail, setShowDetail] = useState(false);
-    const [anchorEl, setAnchorEl] = useState(null);
 
    
-
-    const open = Boolean(anchorEl);
-
     //share link.
     const copyImageUrl = () => {
         navigator.clipboard.writeText(url)
